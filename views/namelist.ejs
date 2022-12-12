@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="stylesheets/dashboard.css"/>
+ <link rel="stylesheet" type="text/css" href="stylesheets/sweetalert2.min.css">
+
+
+<meta charset="UTF-8">
+ <title>edit</title>
+</head>
+<body>
+
+<div class="tablescroll  border-0 table-responsive ">
+ 
+<table class="table-edit table table-striped bg-transparent align-self-center bg-secondary table-dark table-bordered   table-hover table-sm  text-light text-center">
+  <thead class="thead-dark">
+<tr>
+<th  style="font-weight: bold;font-size: 20px;">Supervisor:</th>
+<th colspan="2" style="font-weight: bold;font-size: 20px;">Atualizado as:</th>
+</tr>
+</thead>
+ <% stats.forEach(stat => { %>
+<tr>
+<td ><%= stat.supervisor %></td>
+<td colspan="2"><%= stat.lastipdate %></td>
+</tr>
+<% }); %>
+<thead Class="thead-dark">
+<tr>
+<th scope="col" class="font-weight-bold" >Nomes usados no autocomplete:</th>
+<th scope="col" class="font-weight-bold" colspan="2">Opcoes</th>
+
+</tr>
+</thead>
+    
+    <% nomes.forEach(post => { %>
+        <tr>
+          <td><%= post.Nome %></td>
+          <td colspan="1"><button class="btn btn-outline-primary btn-sm neditar" onclick="neditar('<%= post.id %>')" id="<%= post.id %>">Editar</button></td>
+          <td colspan="1"><button class="btn btn-outline-danger btn-sm napagar" onclick="napagar('<%= post.id %>')" id="<%= post.id %>">Apagar</button></td>
+      </tr>
+   <% }); %>
+        <% for(var i = 0; i < Contador; i++){ %>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+
+            </tr>
+        <% }; %>
+
+
+  </table>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/sweetalert2.all.min.js"></script>
+
+</body>
+</html>

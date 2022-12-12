@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   
+
+    <meta charset="UTF-8">
+    <title>Config</title>
+    <link rel="stylesheet" href="stylesheets/dashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/sweetalert2.min.css">
+
+</head>
+<body>
+<div class="tablescroll  border-0 table-responsive ">
+	<center>
+<table class="table-edit table table-striped bg-transparent align-self-center bg-secondary table-dark table-bordered  font-weight-bold table-hover table-sm  text-light ">
+
+	<tr style="border-bottom: 1pt solid black;">
+		<td class="tdhead">
+		Supervisor:	
+		</td>
+		 <td>
+		 	 <% stats.forEach(stat => { %>
+		 	
+		 	<input type="text" name="supervisor"  style="height: 35px;border-radius: 5px;" id="supervisor" value="<%= stat.supervisor %>">
+		 
+		 	<button  name="save" class="btn btn-outline-primary salvar"  id="<%= stat.id %>" value="Salvar">Salvar</button>
+		 		<% }); %>
+		 </td>
+	</tr>
+	<tr style="border-bottom: 1pt solid black;">
+		<td class="tdhead" >
+		Editar senha:	
+		</td>
+		 <td>
+		 	<button  name="editsenha" id="1" class="btn btn-outline-danger editsenha">Editar Senha</button>
+		 </td>
+	</tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+		<tr><td>&nbsp;</td><td>	</td></tr>
+</table>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/sweetalert2.all.min.js"></script>
+ <script src="javascripts/config.js"></script>
+</center>
+ </div>
+</body>
+</html>

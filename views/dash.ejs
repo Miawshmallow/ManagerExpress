@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="stylesheets/dashboard.css"/>
+ <link rel="stylesheet" type="text/css" href="stylesheets/sweetalert2.min.css">
+ 
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+
+
+<div class="tablescroll  border-0 table-responsive ">
+<table class="table-edit table table-striped bg-transparent align-self-center bg-secondary table-dark table-bordered   table-hover table-sm  text-light text-center">
+<thead class="thead-dark">
+<tr>
+<th colspan="3" style="font-weight: bold;font-size: 20px;">Supervisor:</th>
+<th colspan="4" style="font-weight: bold;font-size: 20px;">Atualizado as:</th>
+</tr>
+</thead>
+
+ <% stats.forEach(stat => { %>
+<tr>
+<td colspan="3"><%= stat.supervisor %></td>
+<td colspan="4"><%= stat.lastipdate %></td>
+</tr>
+<% }); %>
+
+  
+
+<thead class="thead-dark">
+<tr>
+<th scope="col" class="font-weight-bold">Nome:</th>
+<th scope="col"  class="font-weight-bold">Equipamento:</th>
+<th scope="col"  class="font-weight-bold">Local:</th>
+<th scope="col"  class="font-weight-bold">Observacao:</th>
+<th scope="col"  class="font-weight-bold">Status:</th>
+<th scope="col" colspan="2">Opcoes</th>
+</tr>
+</thead>   
+  
+        <% posts.forEach(post => { %>
+            <tr>
+                <td><%= post.nome %></td>
+                <td><%= post.equipamento %></td>
+                <td><%= post.local %></td>
+                <td><%= post.observacao %></td>
+                <td><%= post.status %></td>
+            <td><button type="button" class="btn btn-outline-primary btn-sm " onclick="editar('<%= post.id %>')" id="<%= post.id %>">Editar</button>
+          <td><button type="button" class="btn btn-outline-danger btn-sm" onclick="apagar('<%= post.id %>')"
+            id="<%= post.id %>">Apagar</button></td>
+            </tr>
+        <% }); %>
+        <% for(var i = 0; i < Contador; i++){ %>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        <% }; %>
+
+  </table>
+</div>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/sweetalert2.all.min.js"></script>
+</body>
+</html>

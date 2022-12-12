@@ -1,0 +1,5 @@
+<% dados.forEach(dado => { %>
+<input type="hidden" class="swal2-input" name="id" value="<%= dado.id %>">
+<input type="text" class="swal2-input" name="nome" placeholder="Nome" list="nomes" id="nome" value="<%= dado.Nome %>">
+
+<% }); %>

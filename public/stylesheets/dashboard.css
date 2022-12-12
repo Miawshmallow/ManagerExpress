@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background:url('../images/2.jpg');
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+.fundo-t{
+  background-color: rgba(10,10,10,0.7);
+}
+
+.sidebar {
+    flex-basis: 20%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(10, 10, 10, .65);
+    box-shadow: 0 8px 32px rgb(2, 4, 24);
+    border-right: 2px solid rgba(255, 255, 255, .09);
+    transition: .4s ease-in-out;
+}
+
+.sidebar .nav-title {
+    color: #dadada;
+    margin: 40px 0 18px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+.sidebar nav {
+    padding: 0 30px;
+}
+
+.sidebar nav .nav-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    margin: 8px 0;
+    color: #fff;
+    transition: .3s;
+}
+
+.sidebar nav .nav-item.active {
+    background: #8220D6 !important;
+}
+
+.sidebar nav .nav-item:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.sidebar nav .nav-item i {
+    font-size: 26px;
+}
+
+.sidebar nav .nav-item span {
+    font-size: 18px;
+    margin-left: 8px;
+
+    pointer-events: none;
+}
+.contain{
+ 
+    height: 100%;
+ 
+    padding: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: flex;
+    justify-content: space-around;
+
+}
+.mainf{
+    
+    height: 100%;
+  
+    padding: 0px;
+    flex-basis: 80%;
+
+}
+.table-edit{
+    width: 99%;
+    margin: 0 auto;
+
+
+   
+    
+}
+.tablescroll{
+    align-self: center;
+    float:center;
+    margin: 0 auto;
+    margin-top:20px;
+    width: 95%;
+    height: 94%;
+
+
+    background-color: rgba(10,10,10,0.7);
+    border-radius: 16px;
+
+}
+
+
+.tablescroll::-webkit-scrollbar {
+  display: none;
+}
+.tablescroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hr1{
+    background-color:white;
+    height:2px;
+    border-radius: 10px;
+
+}
+.logo{
+    width: 160px;
+    margin: 0 auto;
+    align-self: center;
+    float: center;
+}

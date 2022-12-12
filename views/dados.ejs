@@ -1,0 +1,18 @@
+<% dados.forEach(dado => { %>
+<tr>
+
+
+<input type="hidden" class="swal2-input" name="id" value="<%= dado.id %>">
+<input type="text" class="swal2-input" name="nome" placeholder="Nome" list="nomes" id="nome" value="<%= dado.nome %>">
+
+<datalist id="nomes">
+  <% nomes.forEach(nome => { %>
+  
+  <option><%= nome.nome %></option>
+  <% }); %>
+</datalist>
+<input type="text" class="swal2-input" name="equipamento" id="equipamento" placeholder="Equipamento" value="<%= dado.equipamento %>">
+<input type="text" class="swal2-input" name="local" placeholder="Local" id="local" value="<%= dado.local %>">
+<input type="text" class="swal2-input" name="observacao" placeholder="Observacao" id="observacao" value="<%= dado.observacao %>">
+<input type="text" class="swal2-input" name="status" id="status" placeholder="Status" value="<%= dado.status %>">
+<% }); %>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheets/style.css"/>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/main.js"></script>
+
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<meta charset="UTF-8">
+    <title>Manager</title>
+</head>
+<body>
+<div style="height: 70px;" class="navbar fundo-t  w-100  justify-content-end">
+    <div id="result" class="result" ></div>
+<form>
+  <input type="username" name="username" id="username" class="input-group-lg" placeholder="Usuario">
+  <input type="password" name="password" id="password" class="input-group-lg" placeholder="Senha">
+  <input type="button" class="submitlogin btn-primary rounded " value="Login">
+</form>
+</div>
+
+<br>
+<div class="fundo-t container w-75 border-0  table-rounded ">
+  <br>
+<table class="table-rounded table  table-striped bg-secondary table-dark table-bordered  p-2 table-hover table-sm  text-light text-center">
+
+<thead class="thead-dark">
+<tr>
+<th scope="col" colspan="3" style="font-weight: bold;font-size: 20px;">Supervisor:</th>
+<th scope="col" colspan="2" style="font-weight: bold;font-size: 20px;">Atualizado as:</th>
+</tr>
+</thead>
+ <% stats.forEach(stat => { %>
+<tr>
+<td colspan="3"><%= stat.supervisor %></td>
+<td colspan="2"><%= stat.lastipdate %></td>
+</tr>
+<% }); %>
+
+  
+
+<thead class="thead-dark">
+<tr>
+<th scope="col" class="font-weight-bold">Nome:</th>
+<th scope="col"  class="font-weight-bold">Equipamento:</th>
+<th scope="col"  class="font-weight-bold">Local:</th>
+<th scope="col"  class="font-weight-bold">Observacao:</th>
+<th scope="col"  class="font-weight-bold">Status:</th>
+</tr>
+</thead>   
+  
+        <% posts.forEach(post => { %>
+            <tr>
+                <td><%= post.nome %></td>
+                <td><%= post.equipamento %></td>
+                <td><%= post.local %></td>
+                <td><%= post.observacao %></td>
+                <td><%= post.status %></td>
+            </tr>
+        <% }); %>
+        <% for(var i = 0; i < Contador; i++){ %>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        <% }; %>
+   
+
+
+</table>
+<br>
+</div>
+
+
+
+
+</body>
+</html>
